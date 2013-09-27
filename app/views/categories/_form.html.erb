@@ -1,0 +1,22 @@
+<% if @category.errors.any? %>
+<h1> ERRORS </h1>
+	<ul>
+		<% @category.errors.full_messages.each do |message| %>
+			<li><%= message %></li>
+		<% end %>
+	</ul>
+<% end %>
+<%= form_for @category, :html => {:multipart => true} do |f| %>
+	<div class="field">
+		<%= f.file_field :photo %>
+	</div>
+	<div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+   </div>
+<% end %>
+
+

@@ -1,0 +1,24 @@
+<center>
+<div class ="display_address" >
+	<p>Order Number:<%= @order.id %></p>
+	<p>Order Status: Not Yet Delivered</p>
+	<p>Shipping Address:<%= @order.shipping_address %></p>
+</div>
+	<table  cellpadding="20" cellspacing="10" bgcolor="#BDBDBD" >
+		<tr>
+			<th>Product Name</th>
+			<th>Product Price</th>
+			<th>Quantity</th>
+			<th>Price</th>
+		</tr>
+		
+		<% @order_items.each do |order_item| %>
+			<tr>
+				<td><%= order_item.product.name %></td>
+				<td><%= order_item.product.price %></td>
+				<td><%= order_item.quantity %></td>
+				<td><%=order_item.price %></td>
+			</tr>
+		<% end %>
+	</table>
+</center>

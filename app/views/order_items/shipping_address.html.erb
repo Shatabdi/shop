@@ -1,0 +1,9 @@
+<%= form_for @order do |f| %>
+	<div class = "field">
+		 <%= f.label :shipping_address %>
+		 <%= f.text_field :shipping_address %>
+	</div>
+	<div class ="actions">
+		<%= f.submit %>
+	</div>
+<% end %>

@@ -1,0 +1,14 @@
+<div class='header'>
+	<h1 class="head">MyShop</h1>
+	<div class='link'>
+		<%= link_to 'My Cart ', cart_items_path %> |  
+		<% if current_user.blank? %>
+			<%= link_to 'login ', new_session_path %>
+		<% else %>
+			<%= link_to 'logout ', session_path(current_user), :method => :delete %> | 
+			<%= current_user.name %>
+			<%= link_to 'My Orders', order_items_path %>
+			<%= link_to 'My profile', user_path(current_user), :method => :get %>
+		<% end %>
+	</div>
+</div> 

@@ -1,0 +1,22 @@
+<center>
+	<table cellpadding="20" cellspacing="10" bgcolor="#BDBDBD">
+		<tr>
+			<th>Order ID</th>
+			<th>Status</th>
+			<th>Price</th>
+		</tr>
+		
+		<% @orders.each do |order| %>
+			<% sum = 0 %>
+			<tr>
+			<td><%= order.id %></td>
+			<td>"not yet delivered"</td>
+			<% order.order_items.each do |order_item| %>
+				<% sum = sum + order_item.price %>
+			<% end %>
+			<td><%= sum %></td>
+			<td><%= link_to 'view', order_path(order) %><td>
+			</tr>
+		<% end %>
+	</table>
+</center>

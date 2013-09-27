@@ -1,0 +1,45 @@
+<center>
+	<div class="userbox">
+		<%= image_tag @user.photo.url %>
+		<table>
+			<tr>
+				<td><b>NAME</b></td>
+				<td><%= @user.name %></td>
+			</tr>
+			<tr>
+				<td><b>DOB</b></td>
+				<td><%= @user.dob %></td>
+			</tr>
+			<tr>
+				<td><b>Email</b></td>
+				<td><%= @user.email %></td>
+			</tr>
+			<tr>
+				<td><b>Phone</b></td>
+				<td><%= @user.phone %></td>
+			</tr>
+			<tr>
+				<td><b>Address</b></td>
+				<td><%= @user.address %></td>
+			</tr>
+			<tr>
+				<td><b>City</b></td>
+				<td><%= @user.city %></td>
+			</tr>
+			<tr>
+				<td><b>State</b></td>
+				<td><%= @user.state %></td>
+			</tr>
+			<tr>
+				<td><b>Country</b></td>
+				<td><%= @user.country %></td>
+			</tr>
+			<tr>
+				<td><%= link_to 'Back', root_path %></td>
+			</tr>
+			<tr>
+				<td><%= link_to 'edit user', edit_user_path(@user)%></td>
+			</tr>
+		</table>
+</div>
+</center>

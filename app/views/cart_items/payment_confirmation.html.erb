@@ -1,0 +1,35 @@
+<% total=0 %>
+
+<center>
+
+		<table cellpadding="20" cellspacing="10" bgcolor="#F5A9BC"  >
+			<tr>
+				<th>Product Name</th>
+				<th>Product Price</th>
+				<th>Quantity</th>
+				<th>Price</th>
+				<th></th>
+			</tr>
+
+			<% @cart_items.each do |cart_item| %>
+				
+				<tr>
+					<td><%= cart_item.product.name %></td>
+					<td><%= cart_item.product.price %>(₹)</td>
+					<td><%= cart_item.quantity %></td>
+					<td><%= cart_item.product.price * cart_item.quantity %>(₹)</td>
+				</tr>
+				<% total= total+(cart_item.product.price * cart_item.quantity)%>
+							
+			<% end %>
+		</table>
+
+		<div class='line'></div>
+		<div class = "tot">
+			<p><label>Total:</label>
+			<%= total %>(₹)
+		</div>
+	
+</center>
+<%= link_to 'Continue Shopping', categories_path %>
+<%= link_to 'Pay and Confirm', order_items_path, :method => :post %>

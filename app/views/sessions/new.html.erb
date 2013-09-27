@@ -1,0 +1,32 @@
+<body>
+<div id = "login-wrapper">
+<center>
+<div class="signbox">
+	<h1>Sign in</h1>
+		<table>
+			<%= form_for(:session, :url => sessions_path) do |f| %>
+				<tr>
+					<div class="field">
+						<td><%= f.label :email %></td>
+						<td><%= f.text_field :email %></td>
+					</div>
+				</tr>
+				<tr>
+					<div class="field">
+						<td><%= f.label :password %></td>
+						<td><%= f.password_field :password %></td>
+					</div>
+				</tr>
+				<tr>
+					<div class="actions">
+						<td><%= f.submit "Sign in" %></td>
+					</div>
+				</tr>
+			<% end %>
+		</table>
+		<%= link_to 'Sign_up', new_user_path,:remote => true %>
+		<%= link_to 'forgot password?', new_password_reset_path %>
+	</div>
+</center>
+</div>
+</body>

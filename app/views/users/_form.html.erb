@@ -1,0 +1,78 @@
+<center>
+	<div class="signupbox">
+
+		<%if @user.errors.any? %>
+		    <h1> ERRORS </h1>
+		    <ul>
+		        <% @user.errors.full_messages.each do |message| %>
+		            <li> 
+		                <%= message %>
+		            </li>
+		        <% end %>
+		    </ul>
+		<% end %>
+
+			<%= form_for @user, :html => { :multipart => true } do |f|  %>
+				<table>
+					<tr>
+						<td><%= f.file_field :photo %></td>
+					</tr>
+
+					<tr>
+						<td><%= f.label :name %></td>
+						<td><%= f.text_field :name %></td>
+					</tr>
+				
+					<tr>
+						<td><%= f.label :dob %></td>
+						<td><%= f.text_field :dob %></td>
+					</tr>
+			
+					<tr>
+						<td><%= f.label :email %></td>
+						<td><%= f.email_field :email %></td>
+					</tr>
+				
+				  <tr>
+						<td><%= f.label :phone %></td>
+						<td><%= f.number_field :phone %></td>
+					</tr>
+					
+					<tr>
+						<td><%= f.label :address %></td>
+						<td><%= f.text_field :address %></td>
+					</tr>
+					
+					<tr>
+						<td><%= f.label :state %></td>
+						<td><%= f.text_field :state %></td>
+					</tr>
+					
+			    <tr>
+						<td><%= f.label :city %></td>
+						<td><%= f.text_field :city %></td>
+				  </tr>
+				
+					<tr>
+						<td><%= f.label :country %></td>
+						<td><%= f.text_field :country %></td>
+					</tr>
+				
+				  <tr>
+						<td><%= f.label :password %></td>
+						<td><%= f.password_field :password %></td>
+					</tr>
+				
+			    <tr>
+						<td><%= f.label :password_conirmation %></td>
+						<td><%= f.password_field :password_confirmation%></td>
+					</tr>
+					
+					<tr>
+						<td><%= f.submit %></td>
+				  </tr>
+				 </table>
+			<% end %>
+
+	</div>
+</center>

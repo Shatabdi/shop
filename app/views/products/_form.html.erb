@@ -1,0 +1,25 @@
+<% if @product.errors.any? %>
+	<h1>ERRORS</h1>
+	<ul>
+		<% @product.errors.full_messages.each do |message| %>
+			<li><%= message %></li>
+		<% end %>
+	</ul>
+<% end %>
+<%= form_for [@category, @product], :html => {:multipart => true}  do |f| %>
+    <div class="field">
+        <%= f.file_field :photo %>
+    </div>
+    <div class="field">
+        <%= f.label :name %>
+        <%= f.text_field :name %><br />
+    </div>
+    <div class="field">
+        <%= f.label :price %>
+        <%= f.text_field :price %><br />
+    </div>
+    
+    <div class="actions">
+        <%= f.submit %>
+    </div>
+<% end %>

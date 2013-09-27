@@ -1,0 +1,17 @@
+<center>
+	<div  class= "signbox">
+		<h1>Reset Password</h1>
+		<% if flash[:notice] %>
+			<%= flash[:notice] %>
+		<% end %>
+		<%= form_tag password_resets_path, :method => :post do %>
+			<div class = "field">
+				<%= label_tag :email %>
+				<%= text_field_tag :email, nil %>
+			</div>
+			<div class ="actions">
+				<%= submit_tag "reset password" %>
+			</div> 
+		<% end %>
+	</div>
+</center>

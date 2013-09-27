@@ -1,0 +1,56 @@
+<table>
+<%= form_for(@user, :method => 'put') do |f| %>
+	<tr>
+		<div class="field">
+			<td><%= f.label :name %></td>
+			<td><%= f.text_field :name %></td>
+		</div>
+	</tr>
+	<tr>
+		<div class="field">
+			<td><%= f.label :DOB %></td>
+			<td><%= f.text_field :dob%></td>
+		</div>
+	</tr>
+	<tr>
+		<div class="field">
+			<td><%= f.label :email %></td>
+			<td><%= f.text_field :email %></td>
+		</div>
+	</tr>
+	<tr>
+		<div class="field">
+			<td><%= f.label :Phone %></td>
+			<td><%= f.text_field :phone%></td>
+		</div>
+	</tr>
+	<tr>
+		<div class="field">
+			<td><%= f.label :Address %></td>
+			<td><%= f.text_field :address %></td>
+		</div>
+	</tr>
+	<tr>
+		<div class="field">
+			<td><%= f.label :City %></td>
+			<td><%= f.text_field :city %></td>
+		</div>
+	</tr>
+	<tr>
+		<div class="field">
+			<td><%= f.label :State %></td>
+			<td><%= f.text_field :state %></td>
+		</div>
+	</tr>
+	<tr>
+		<div class="field">
+			<td><%= f.label :Country %></td>
+			<td><%= f.text_field :country %></td>
+		</div>
+	</tr>
+<% end %>
+</table>
+<div class="actions"> 
+	<%= f.submit %> 
+	</center>
+</div>

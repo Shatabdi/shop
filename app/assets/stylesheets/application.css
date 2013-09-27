@@ -1,0 +1,147 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require jquery-ui
+ *= require_tree .
+ */
+
+ .header
+ {
+ 	width: 100%;
+ 	height: 170px;
+ 	background-color: gray;
+ }
+ .link
+ {
+ 	float:right;
+ }
+ .box
+ {
+ 	height: 236px;
+ 	width: 127px;
+  padding:23px;
+  margin:10px;
+  float: left;
+  background-color: #d8d8d8;
+  color:black;
+  border-radius: 3px;
+	}
+	h1.head
+	{
+	  color:#fff;
+	  
+	  margin: 77px 0px 0px 60px;
+	  font-size: 350%;
+	  width:15%;
+	  border-radius:5px;
+	  float:left;
+	}
+	.signbox
+	{
+		width: 507px;
+		padding:10px;
+		border:5px solid gray;
+		margin:10px; 
+	}
+	.signupbox
+	{
+		width: 595px;
+		padding:10px;
+		border:5px solid gray;
+		margin:10px; 
+	}
+	.userbox
+	{
+		width: 507px;
+		padding:10px;
+		border:5px black;
+		margin:10px; 
+	}
+	 .category_display
+ {
+ 	font-size: 20px
+ 	width: 100%;
+ 	height: 100px;
+ 	background-color: #2ECCFA;
+ }
+
+
+ .input 
+{
+  width: 39px;
+}
+table
+{
+	font-size: 20px;
+	margin-top: 20px;
+}
+.tot
+{
+margin-top: 100px;
+/*float: right;*/
+font-size: 30px;
+margin-left: 500px;
+}
+.line
+{
+	width: 500px;
+	height: 3px;
+	background-color: black;
+	float: right;
+	margin-right: 150px;
+	margin-top: 80px;
+}
+.display_product
+{
+
+}
+.category_list
+{
+	float: left;
+  width: 20%;
+}
+.product_list
+{
+	float: left;
+  width: 73%;
+}
+.separation
+{
+	background-color: #000000;
+  height: 3px;
+  margin-bottom: 31px;
+  margin-top: 31px;
+  width: 231px;
+}
+.display_confirmation
+{
+	font-size: 30
+}
+
+.display_orders
+{
+	width: 507px;
+	padding:10px;
+	margin:10px; 
+}
+
+.display_address
+{
+	width: 300px;
+	height: 100px;
+	background-color: #E6E6E6;
+}
+
+.hide_categories
+{
+
+
+}
